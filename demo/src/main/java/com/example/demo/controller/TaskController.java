@@ -29,8 +29,8 @@ public class TaskController {
     }
 
     @PutMapping("/tasks/{id}")
-    public Task updateTask(@RequestBody Task Task) {
-        return service.updateTask(Task);
+    public Task updateTask(@PathVariable int id, @RequestBody Task Task) {
+        return service.updateTask(id, Task);
     }
 
     @DeleteMapping("/tasks/{id}")

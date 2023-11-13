@@ -33,8 +33,8 @@ public class TaskService {
         return "Task removed !! " + id;
     }
 
-    public Task updateTask(Task Task) {
-        Task existingTask = repository.findById(Task.getId()).orElse(null);
+    public Task updateTask(int id, Task Task) {
+        Task existingTask = repository.findById(id).orElse(null);
         existingTask.setTitle(Task.getTitle());
         existingTask.setDescription(Task.getDescription());
         existingTask.setCompleted(Task.getCompleted());
